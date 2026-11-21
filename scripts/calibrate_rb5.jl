@@ -1,8 +1,7 @@
 using LinearAlgebra, DelimitedFiles, Rotations, JuMP, COSMO, TOML
 
 # Reuse the authors' objective and SO(3) constraints. This entry point handles
-# the known-scale, single-camera/single-board case; the generalized code remains
-# available in experiments/rw_multi_eye_multi_hand.jl.
+# the known-scale, single-camera/single-board case used by this release.
 include(joinpath(@__DIR__, "..", "src", "calibration", "robot_world_costs.jl"))
 include(joinpath(@__DIR__, "..", "src", "rotation_sdp_constraints.jl"))
 

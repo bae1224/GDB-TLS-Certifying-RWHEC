@@ -35,5 +35,5 @@ fi
 "$rwhe_julia" --startup-file=no --version
 export JULIA_NUM_PRECOMPILE_TASKS="${JULIA_NUM_PRECOMPILE_TASKS:-2}"
 bash "$rwhe_root/scripts/julia_rb5.sh" -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
-echo 'Julia runtime and rb5 dependencies are ready.'
+echo 'Julia runtime and environment dependencies are ready.'
 echo 'Validate with: bash scripts/julia_rb5.sh tests/rb5_solver.jl'
