@@ -7,9 +7,9 @@ import time
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
-from hardware.rb5_realsense.devices import RobotReader
+from hardware.rb5.robot import RobotReader
 from .feedback import MESSAGE_TYPE, CLOCK_SOURCE, validate_feedback
-from hardware.rb5_realsense.kinematics import RB5Kinematics
+from hardware.rb5.kinematics import RB5Kinematics
 
 
 def state_from_ros(message):

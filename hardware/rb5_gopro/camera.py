@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 from scipy.optimize import least_squares
 from scipy.spatial.transform import Rotation
-from hardware.rb5_realsense.kinematics import ROOT
+from hardware.rb5.kinematics import ROOT
 
 
 def sha256(path):

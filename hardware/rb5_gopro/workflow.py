@@ -9,11 +9,11 @@ import shutil
 import time
 import cv2
 import numpy as np
-from hardware.rb5_realsense.__main__ import load_config, require_layout
-from hardware.rb5_realsense.dataset import atomic_json, export_csv
-from hardware.rb5_realsense.devices import RobotReader, require_stationary
-from hardware.rb5_realsense.geometry import rb_pose_to_transform, pose_distance, validate_transform
-from hardware.rb5_realsense.kinematics import RB5Kinematics
+from hardware.rb5.config import load_config, require_layout
+from hardware.rb5.dataset import atomic_json, export_csv
+from hardware.rb5.robot import RobotReader, require_stationary
+from hardware.rb5.geometry import rb_pose_to_transform, pose_distance, validate_transform
+from hardware.rb5.kinematics import RB5Kinematics
 from .camera import GoProCamera, sha256
 
 
@@ -277,7 +277,7 @@ def load_manifest(path):
 
 
 def import_images(config, manifest, output):
-    from hardware.rb5_realsense.board import make_board
+    from hardware.rb5.board import make_board
     require_robot_config(config)
     if not config['board']['dimensions_measured']:
         raise ValueError('Measure the printed board and set board.dimensions_measured=true')

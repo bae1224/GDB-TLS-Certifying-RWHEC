@@ -13,7 +13,7 @@ def get_dictionary(name):
 
 def make_board(config):
     if not hasattr(cv2.aruco, "CharucoDetector"):
-        raise RuntimeError("Install hardware/requirements-rb5.txt (OpenCV 4.11 required)")
+        raise RuntimeError("Install hardware/requirements-gopro.txt (OpenCV 4.11 required)")
     dictionary = get_dictionary(config["dictionary"])
     nx, ny = config["squares_x"], config["squares_y"]
     square, marker = config["square_length_m"], config["marker_length_m"]
