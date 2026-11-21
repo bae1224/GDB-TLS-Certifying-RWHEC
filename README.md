@@ -100,7 +100,5 @@ RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
 인증 범위는 지정된 목적함수의 부동소수점 수치 검증으로, 물리적 절대 정확도 보장은 제외.
 미인증만으로 비최적성을 의미하지 않음.
 
-다른 촬영 세션과 합성 실험은 공개 범위에서 제외.
-
 - 상세 조건: [재현 안내](real44data/README.md)
 - 코드 출처: [UPSTREAM.json](UPSTREAM.json), [provenance.json](real44data/provenance.json)
