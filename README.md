@@ -10,31 +10,31 @@ least squares (TLS). The release contains the 44 original-resolution images,
 paired robot records, processed poses, fixed X/Y, original numerical results,
 and portable reproduction scripts.
 
-Start with **[the Real44 reproduction guide](research/real44/README.md)**.
+Start with **[the Real44 reproduction guide](real44data/README.md)**.
 
 | Resource | Location |
 |---|---|
-| Images and paired pose records | [research/real44/data](research/real44/data) |
-| Fixed paper A/B/X/Y inputs | [research/real44/input](research/real44/input) |
-| Original paper results and figures | [research/real44/reference](research/real44/reference) |
-| Frozen experimental protocol | [protocol.json](research/real44/protocol.json) |
-| Reproduce and independently validate | [reproduce.sh](research/real44/reproduce.sh) |
-| Numerical certificate implementation | [research/real44/lib](research/real44/lib) |
+| Images and paired pose records | [real44data/data](real44data/data) |
+| Fixed paper A/B/X/Y inputs | [real44data/input](real44data/input) |
+| Original paper results and figures | [real44data/reference](real44data/reference) |
+| Frozen experimental protocol | [protocol.json](real44data/protocol.json) |
+| Reproduce and independently validate | [reproduce.sh](real44data/reproduce.sh) |
+| Numerical certificate implementation | [real44data/lib](real44data/lib) |
 
 ## Reproduce
 
 Run from the repository root on Linux x86_64 with Python 3.10 or later:
 
 ```bash
-python3 -m venv research/real44/.venv
-research/real44/.venv/bin/python -m pip install -r research/real44/requirements.txt
+python3 -m venv real44data/.venv
+real44data/.venv/bin/python -m pip install -r real44data/requirements.txt
 bash scripts/install_julia_rb5.sh
-RWHE_PYTHON=research/real44/.venv/bin/python bash research/real44/reproduce.sh
+RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
 ```
 
 The Julia runtime is pinned to 1.10.10 and its dependencies are recorded in
-`environments/rb5/Manifest.toml`. Results are written to
-`research/real44/.work/reproduction/`; the published reference files are preserved.
+`rb5/Manifest.toml`. Results are written to
+`real44data/.work/reproduction/`; the published reference files are preserved.
 
 The run checks 75 cutoffs, performs 324 warmed timing calls (12 cutoffs × 3 methods
 × 9 repetitions), independently reconstructs the costs and bounds in NumPy,
@@ -58,5 +58,5 @@ this repository's release scope.
 
 Support code comes from the existing RB5 calibration repository; exact source
 commit and file hashes are in [UPSTREAM.json](UPSTREAM.json). Experimental code
-provenance is in [research/real44/provenance.json](research/real44/provenance.json).
+provenance is in [real44data/provenance.json](real44data/provenance.json).
 See [LICENSE](LICENSE).

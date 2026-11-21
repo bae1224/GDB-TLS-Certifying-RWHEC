@@ -3,8 +3,8 @@
   "source_commit": "2695301a22a9e3cc0e6388c2b39d34aa7eb40b44",
   "copied_support_files_sha256": {
     "LICENSE": "24e7df72a7422eadadb6534f956b1f4f07495f1d35fbfb35cf25431cdd750cb7",
-    "environments/rb5/Manifest.toml": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68",
-    "environments/rb5/Project.toml": "7c5e733941b253d672a841fb05bf5f94cd856532dfa12d3ffcbec3386c94afa2",
+    "rb5/Manifest.toml": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68",
+    "rb5/Project.toml": "7c5e733941b253d672a841fb05bf5f94cd856532dfa12d3ffcbec3386c94afa2",
     "hardware/__init__.py": "acc4d118e403c4c537277fd2d8963def3169612a226c75a7e19e5194665833b1",
     "hardware/intrinsics/2026-10-27/README.md": "cf2889fb3046410a22c75a08defc18dc3ab35b6ecc3dd4e3221cdf1b9ca53aac",
     "hardware/intrinsics/2026-10-27/fisheye.json": "bd0beaf5a03afb0b4a1d77a25735cc2342b513c87f3f6e5d0313f210af6c2acb",
@@ -33,11 +33,25 @@
     "hardware/rb5_realsense/kinematics.py": "dd19a8213e5cd174e30db8ae83c8ef17f29eeb5d3a2e3b188cdd9290a6230f09",
     "hardware/requirements-gopro.txt": "d88ebeca14ceb9964a56de4157a8143429d3130924da581c5841d8fc6e220b54",
     "scripts/calibrate_rb5.jl": "1205bc98507ad5e2f5a7c24e615f3b614b3a5489d0afb3c8f0a858009d43a6fc",
-    "scripts/install_julia_rb5.sh": "5e9f90bdf6698493ebf0ab7f6463d5f1dfcfe8692c06dd781fe8a25e5bada4b7",
-    "scripts/julia_rb5.sh": "05c7588955629bae7d61eca555f4d4d9333cc90dda68ed241fc83d8714b55c8c",
+    "scripts/install_julia_rb5.sh": "695fc3c7f828090a4a2e921a4e91f4a85ad0e71bfba3c836328778432073a419",
+    "scripts/julia_rb5.sh": "d3d920a8789645b4ebd7fa4df620bfdd32a9277adf2094556980dec386e471ec",
     "src/calibration/robot_world_costs.jl": "afc0e3ff0a43e6ce89e4401c5f3bba317863e8f37e3adf90a7048cf55e023600",
     "src/rotation_sdp_constraints.jl": "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237",
     "tests/rb5_solver.jl": "a6de50e669d765f53b3719d032ba663f78969305397fde65622c679e1c90029c"
   },
-  "scope": "Standalone support for the original Real44 paper reproduction. Support files copied from the committed source tree, excluding uncommitted acquisition/replay/split changes."
+  "scope": "Standalone support for the original Real44 paper reproduction. Support files copied from the committed source tree, excluding uncommitted acquisition/replay/split changes. Release hashes use the current layout; source paths and hashes for adapted files are recorded separately.",
+  "source_path_by_release_path": {
+    "rb5/Manifest.toml": "environments/rb5/Manifest.toml",
+    "rb5/Project.toml": "environments/rb5/Project.toml"
+  },
+  "adapted_support_files": {
+    "scripts/julia_rb5.sh": {
+      "source_sha256": "05c7588955629bae7d61eca555f4d4d9333cc90dda68ed241fc83d8714b55c8c",
+      "change": "Use rb5/ as the Julia project directory."
+    },
+    "scripts/install_julia_rb5.sh": {
+      "source_sha256": "5e9f90bdf6698493ebf0ab7f6463d5f1dfcfe8692c06dd781fe8a25e5bada4b7",
+      "change": "Report the rb5/ environment location."
+    }
+  }
 }
