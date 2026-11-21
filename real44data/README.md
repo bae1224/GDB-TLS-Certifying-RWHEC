@@ -38,7 +38,7 @@ full-support RWHE 후보에 대한 singleton, pairwise, cascade TLS 인증 실�
 ## 설치와 재현
 
 아래 명령은 저장소 루트에서 실행합니다. Python 3.10 이상과 Julia 1.10이
-필요합니다. Julia 환경은 기존 `rb5/Manifest.toml`로 고정됩니다.
+필요합니다. Julia 환경은 기존 `environment/Manifest.toml`로 고정됩니다.
 Julia 설치 스크립트는 Linux x86_64용입니다.
 
 ```bash
@@ -68,13 +68,19 @@ RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh real44data/
 bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl real44data/data/combined real44data/.work/refit eye_in_hand
 ```
 
-원본 이미지로부터 보드 pose를 다시 추출하는 코드는 기존
-`hardware/rb5_gopro`에 있습니다. OpenCV 등 영상 처리 의존성은
-`hardware/requirements-gopro.txt`를 참조하십시오.
+원본 이미지로부터 보드 pose를 추출하는 코드는 `hardware/rb5_gopro`에,
+관절각에서 로봇 pose를 계산하는 FK와 공용 처리 코드는 `hardware/rb5`에 있습니다.
+RB5 URDF는 `hardware/models/rainbow/rb5_850e.urdf`에 포함되어 있습니다.
+OpenCV 등 영상 처리 의존성은 `hardware/requirements-gopro.txt`를 참조하십시오.
+아래 두 명령으로 원본 JPG와 로봇 기록에서 A/B를 다시 만들고, 그 입력으로 X/Y를 추정합니다.
 
 ```bash
 python3 -m hardware.rb5_gopro --config hardware/rb5.gopro.json import --manifest real44data/data/manifest.json --output real44data/.work/reimport
+bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl real44data/.work/reimport/combined real44data/.work/refit_from_images eye_in_hand
 ```
+
+이 과정은 저장된 데이터로 실행되므로 ROS·RealSense·실제 장비 연결이 필요하지 않습니다.
+새로 추정한 X/Y는 별도 결과이며, `reproduce.sh`는 계속 논문용 고정 후보를 사용합니다.
 
 ## 확인할 결과와 해석
 
