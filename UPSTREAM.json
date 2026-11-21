@@ -3,8 +3,8 @@
   "source_commit": "2695301a22a9e3cc0e6388c2b39d34aa7eb40b44",
   "copied_support_files_sha256": {
     "LICENSE": "24e7df72a7422eadadb6534f956b1f4f07495f1d35fbfb35cf25431cdd750cb7",
-    "rb5/Manifest.toml": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68",
-    "rb5/Project.toml": "7c5e733941b253d672a841fb05bf5f94cd856532dfa12d3ffcbec3386c94afa2",
+    "environment/Manifest.toml": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68",
+    "environment/Project.toml": "7c5e733941b253d672a841fb05bf5f94cd856532dfa12d3ffcbec3386c94afa2",
     "hardware/__init__.py": "acc4d118e403c4c537277fd2d8963def3169612a226c75a7e19e5194665833b1",
     "hardware/intrinsics/2026-10-27/README.md": "cf2889fb3046410a22c75a08defc18dc3ab35b6ecc3dd4e3221cdf1b9ca53aac",
     "hardware/intrinsics/2026-10-27/fisheye.json": "bd0beaf5a03afb0b4a1d77a25735cc2342b513c87f3f6e5d0313f210af6c2acb",
@@ -19,39 +19,78 @@
     "hardware/rb5.gopro.json": "8da9727b8844ab3eefb4bb3cde63db8ed902fe12667b075560bef0bfb8eb32e0",
     "hardware/rb5_gopro/__init__.py": "f6e31eaa8e7ace2cd148f63c5e564bfde7262960abace17bb5d0ac49b17f97d6",
     "hardware/rb5_gopro/__main__.py": "94f6ca9390f717fd209bc66b4e7f54e00ffd91b4c881e468fc14e200020bdbea",
-    "hardware/rb5_gopro/camera.py": "c6c4eea185701be3b424fd1181e22332b319d5db0faaaa0c347269eb7434e055",
+    "hardware/rb5_gopro/camera.py": "4e7c1cd8a5a13c24be8ae6d3996149ca925f9cc895ac12216c30b41ffcf79cf7",
     "hardware/rb5_gopro/feedback.py": "cd11a11e6f589d59e0f13aa3d2f2458dd7d4c8b0cbae4ac3416cc8b01fe32272",
     "hardware/rb5_gopro/interactive.py": "d91dbf8704c000b00746f89b4900e1713cd5f5c18a87cbac472d0c535b5b07e5",
-    "hardware/rb5_gopro/ros2_robot.py": "b5cefa6d7e55f9d74630f01db45011294583386aa27651761793d6251afa55e2",
-    "hardware/rb5_gopro/workflow.py": "f9240d82f7928ea16decccd6cfa52e5be5f9f961449ef6e42430c8650467130c",
-    "hardware/rb5_realsense/__init__.py": "26aa379de4198badcca1cdc2d0acc88359bf8918ac1d1535f89fb603873e5d4b",
-    "hardware/rb5_realsense/__main__.py": "d973678f3b2636f8088828a2469e921060991802216843ef9da7a321f4c52f75",
-    "hardware/rb5_realsense/board.py": "d61cb12880b1abb7a72e31d1c76a2ef037263567f3aacfdf7258d24cd6c736f3",
-    "hardware/rb5_realsense/dataset.py": "3d77873fa9aa61de390c022baa4c0c74374f97812b3f736f691d4c69d2b709b7",
-    "hardware/rb5_realsense/devices.py": "43b0aeac6b01aa5075b1b7024151584062b3c1b8dab70e9b751be2c2975b315c",
-    "hardware/rb5_realsense/geometry.py": "b78b4e6952ae42ef5b279ecdcacd5d335bebdc0d202d7397ee92b8f5d6430dd8",
-    "hardware/rb5_realsense/kinematics.py": "dd19a8213e5cd174e30db8ae83c8ef17f29eeb5d3a2e3b188cdd9290a6230f09",
+    "hardware/rb5_gopro/ros2_robot.py": "6d7c98fbf67be3469b78c44b287d5f5ce0c9d94a67eb3615e0c62d3c5e26afe5",
+    "hardware/rb5_gopro/workflow.py": "1ae30f81400a027486dec0b795ef97620531c3dbed17b29a83c2add7ff86b1fd",
+    "hardware/rb5/__init__.py": "3e43570ed2061034d070c6dbca8bc4df527953e63930b7512907158ec474749b",
+    "hardware/rb5/config.py": "278c90576b14c77100cfad331f370c25687a79ad66a44e52cd4a396db4a75513",
+    "hardware/rb5/board.py": "21c7384a2470d9f0cee2142ea954add21a67f78294d1b57a3bdababe516dca95",
+    "hardware/rb5/dataset.py": "3d77873fa9aa61de390c022baa4c0c74374f97812b3f736f691d4c69d2b709b7",
+    "hardware/rb5/robot.py": "013e1d4b1be8db05b7ce84d8f5c7a63c5a59656a9c37e9ab95a0ea7bbd907b59",
+    "hardware/rb5/geometry.py": "b78b4e6952ae42ef5b279ecdcacd5d335bebdc0d202d7397ee92b8f5d6430dd8",
+    "hardware/rb5/kinematics.py": "dd19a8213e5cd174e30db8ae83c8ef17f29eeb5d3a2e3b188cdd9290a6230f09",
     "hardware/requirements-gopro.txt": "d88ebeca14ceb9964a56de4157a8143429d3130924da581c5841d8fc6e220b54",
-    "scripts/calibrate_rb5.jl": "1205bc98507ad5e2f5a7c24e615f3b614b3a5489d0afb3c8f0a858009d43a6fc",
-    "scripts/install_julia_rb5.sh": "695fc3c7f828090a4a2e921a4e91f4a85ad0e71bfba3c836328778432073a419",
-    "scripts/julia_rb5.sh": "d3d920a8789645b4ebd7fa4df620bfdd32a9277adf2094556980dec386e471ec",
+    "scripts/calibrate_rb5.jl": "9444898c204288516e9354c07dd69c61841929a18b665b429a8c0923474bd63c",
+    "scripts/install_julia_rb5.sh": "911b538c47108e255a49ecabc854569a7ef38fb0e3519dc4313d39d28fac6f46",
+    "scripts/julia_rb5.sh": "f8a95cd195c19744cd4ae7cd6936d4b18ddb43c2472137e0182ced3b8272f423",
     "src/calibration/robot_world_costs.jl": "afc0e3ff0a43e6ce89e4401c5f3bba317863e8f37e3adf90a7048cf55e023600",
     "src/rotation_sdp_constraints.jl": "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237",
     "tests/rb5_solver.jl": "a6de50e669d765f53b3719d032ba663f78969305397fde65622c679e1c90029c"
   },
-  "scope": "Standalone support for the original Real44 paper reproduction. Support files copied from the committed source tree, excluding uncommitted acquisition/replay/split changes. Release hashes use the current layout; source paths and hashes for adapted files are recorded separately.",
+  "scope": "Standalone support for the original Real44 paper reproduction. Shared RB5 utilities are retained; RealSense camera acquisition is removed. Release hashes use the current layout; original source paths and hashes for adapted files are recorded separately. New acquisition-session experiments are excluded.",
   "source_path_by_release_path": {
-    "rb5/Manifest.toml": "environments/rb5/Manifest.toml",
-    "rb5/Project.toml": "environments/rb5/Project.toml"
+    "environment/Manifest.toml": "environments/rb5/Manifest.toml",
+    "environment/Project.toml": "environments/rb5/Project.toml",
+    "hardware/rb5/__init__.py": "hardware/rb5_realsense/__init__.py",
+    "hardware/rb5/config.py": "hardware/rb5_realsense/__main__.py",
+    "hardware/rb5/board.py": "hardware/rb5_realsense/board.py",
+    "hardware/rb5/dataset.py": "hardware/rb5_realsense/dataset.py",
+    "hardware/rb5/robot.py": "hardware/rb5_realsense/devices.py",
+    "hardware/rb5/geometry.py": "hardware/rb5_realsense/geometry.py",
+    "hardware/rb5/kinematics.py": "hardware/rb5_realsense/kinematics.py"
   },
   "adapted_support_files": {
-    "scripts/julia_rb5.sh": {
-      "source_sha256": "05c7588955629bae7d61eca555f4d4d9333cc90dda68ed241fc83d8714b55c8c",
-      "change": "Use rb5/ as the Julia project directory."
+    "hardware/rb5_gopro/camera.py": {
+      "source_sha256": "c6c4eea185701be3b424fd1181e22332b319d5db0faaaa0c347269eb7434e055",
+      "change": "Import shared calibration utilities from hardware.rb5."
+    },
+    "hardware/rb5_gopro/ros2_robot.py": {
+      "source_sha256": "b5cefa6d7e55f9d74630f01db45011294583386aa27651761793d6251afa55e2",
+      "change": "Import shared calibration utilities from hardware.rb5."
+    },
+    "hardware/rb5_gopro/workflow.py": {
+      "source_sha256": "f9240d82f7928ea16decccd6cfa52e5be5f9f961449ef6e42430c8650467130c",
+      "change": "Import shared calibration utilities from hardware.rb5."
+    },
+    "hardware/rb5/__init__.py": {
+      "source_sha256": "26aa379de4198badcca1cdc2d0acc88359bf8918ac1d1535f89fb603873e5d4b",
+      "change": "Describe the shared RB5 calibration package."
+    },
+    "hardware/rb5/config.py": {
+      "source_sha256": "d973678f3b2636f8088828a2469e921060991802216843ef9da7a321f4c52f75",
+      "change": "Extract only configuration checks used by the GoPro workflow."
+    },
+    "hardware/rb5/board.py": {
+      "source_sha256": "d61cb12880b1abb7a72e31d1c76a2ef037263567f3aacfdf7258d24cd6c736f3",
+      "change": "Point the OpenCV installation hint to requirements-gopro.txt."
+    },
+    "hardware/rb5/robot.py": {
+      "source_sha256": "43b0aeac6b01aa5075b1b7024151584062b3c1b8dab70e9b751be2c2975b315c",
+      "change": "Keep RB5 state reading and stationarity checks; remove the RealSense camera class."
+    },
+    "scripts/calibrate_rb5.jl": {
+      "source_sha256": "1205bc98507ad5e2f5a7c24e615f3b614b3a5489d0afb3c8f0a858009d43a6fc",
+      "change": "Describe the shipped single-camera solver without referencing an unshipped generalized entry point."
     },
     "scripts/install_julia_rb5.sh": {
       "source_sha256": "5e9f90bdf6698493ebf0ab7f6463d5f1dfcfe8692c06dd781fe8a25e5bada4b7",
-      "change": "Report the rb5/ environment location."
+      "change": "Report the environment/ directory."
+    },
+    "scripts/julia_rb5.sh": {
+      "source_sha256": "05c7588955629bae7d61eca555f4d4d9333cc90dda68ed241fc83d8714b55c8c",
+      "change": "Use environment/ as the Julia project directory."
     }
   }
 }
