@@ -1,0 +1,7 @@
+# Preserve exact artifact bytes so SHA256 verification also works on Windows.
+* -text
+*.JPG binary
+*.png binary
+*.pdf binary
+# Original CSV exports use CRLF line endings.
+*.csv whitespace=cr-at-eol
