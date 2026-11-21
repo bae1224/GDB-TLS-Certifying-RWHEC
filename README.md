@@ -1,4 +1,4 @@
-# RWHEC_TLS_Certification
+# Grouped Deletion Bounds for Certifying TLS Optimality in Robot-World Hand-Eye Calibration
 
 RB5-850·GoPro HERO13으로 수집한 **기존 논문 44쌍 데이터와 재현 코드**입니다.
 원본 이미지와 로봇 기록에서 pose를 추출하고 RWHEC 해를 구하는 코드,
@@ -16,7 +16,7 @@ Robot–World and Hand–Eye Calibration은 관측 자세 `A_i`, `B_i`로부터
 
 ## KRoC 논문
 
-**Grouped Deletion Bounds for Certifying Full-Support RWHE Candidates**는
+**Grouped Deletion Bounds for Certifying TLS Optimality in Robot-World Hand-Eye Calibration**은
 LS 후보가 truncated least squares(TLS)에서도 최적인지 검사합니다.
 모든 관측 비용이 cutoff 미만인 full-support 후보를 대상으로 LS dual 해를 재사용하고,
 singleton·pairwise 제거 bounds를 cascade로 결합하여 관측 제거 조합을 직접 열거하지 않고
