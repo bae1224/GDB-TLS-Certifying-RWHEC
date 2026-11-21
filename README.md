@@ -4,7 +4,7 @@
 
 원본 이미지·로봇 기록의 pose 추출, RWHEC 해 추정, 논문 고정 후보의 TLS 인증 코드 포함.
 
-## RWHEC
+## Robot–World and Hand–Eye Calibration (RWHEC)
 
 Robot–World and Hand–Eye Calibration: 관측 자세 `A_i`, `B_i`에서
 `A_i X = Y B_i`를 만족하는 두 고정 변환 추정.
