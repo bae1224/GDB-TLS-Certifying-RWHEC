@@ -1,6 +1,6 @@
 # Grouped Deletion Bounds for Certifying TLS Optimality in Robot-World Hand-Eye Calibration
 
-RB5-850·GoPro HERO13으로 수집한 **기존 논문 44쌍 데이터와 재현 코드**입니다.
+레인보우 로보틱스 RB5-850 Manipulator·GoPro HERO 13 광각 카메라로 수집한 **기존 논문 44쌍 데이터와 재현 코드**입니다.
 원본 이미지와 로봇 기록에서 pose를 추출하고 RWHEC 해를 구하는 코드,
 논문의 고정 후보에 대한 TLS 인증 코드가 포함되어 있습니다.
 
