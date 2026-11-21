@@ -7,4 +7,4 @@ if [[ ! -x "$rwhe_julia" ]]; then
     exit 1
 fi
 export JULIA_DEPOT_PATH="${RWHE_JULIA_DEPOT:-$HOME/.local/share/rwhe/julia-depot}"
-exec "$rwhe_julia" --startup-file=no --project="$rwhe_root/environments/rb5" "$@"
+exec "$rwhe_julia" --startup-file=no --project="$rwhe_root/rb5" "$@"
