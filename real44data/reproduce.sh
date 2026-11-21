@@ -2,7 +2,7 @@
 # Run only the published real44 experiment, preserving its reference outputs.
 set -euo pipefail
 rwhe_package="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-rwhe_repo="$(cd -- "$rwhe_package/../.." && pwd)"
+rwhe_repo="$(cd -- "$rwhe_package/.." && pwd)"
 rwhe_output="${1:-$rwhe_package/.work/reproduction}"
 rwhe_python="${RWHE_PYTHON:-python3}"
 export OPENBLAS_NUM_THREADS=1

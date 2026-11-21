@@ -35,7 +35,7 @@ def verify():
         assert np.allclose(np.loadtxt(ROOT/f'input/{letter}.csv', delimiter=','),
                            np.loadtxt(data/f'combined/tag_0_cam_0_{letter}.csv', delimiter=','),
                            atol=1e-14, rtol=0)
-    constraints = ROOT.parents[1]/'src/rotation_sdp_constraints.jl'
+    constraints = ROOT.parent/'src/rotation_sdp_constraints.jl'
     provenance = json.loads((ROOT/'provenance.json').read_text())
     assert digest(constraints) == provenance['rotation_constraints_sha256']
     print(f'Verified {len(hashes)} release files and all 44 image/robot/pose pairings.', flush=True)

@@ -1,6 +1,6 @@
 # Cost functions copied from the original real44 experiment.
 using LinearAlgebra, DelimitedFiles, TOML, JuMP, COSMO
-include(joinpath(@__DIR__, "../../../src/rotation_sdp_constraints.jl"))
+include(joinpath(@__DIR__, "../../src/rotation_sdp_constraints.jl"))
 BLAS.set_num_threads(1)
 
 function posecsv(path)

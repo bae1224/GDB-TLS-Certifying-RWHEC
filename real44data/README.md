@@ -38,22 +38,22 @@ full-support RWHE 후보에 대한 singleton, pairwise, cascade TLS 인증 실�
 ## 설치와 재현
 
 아래 명령은 저장소 루트에서 실행합니다. Python 3.10 이상과 Julia 1.10이
-필요합니다. Julia 환경은 기존 `environments/rb5/Manifest.toml`로 고정됩니다.
+필요합니다. Julia 환경은 기존 `rb5/Manifest.toml`로 고정됩니다.
 Julia 설치 스크립트는 Linux x86_64용입니다.
 
 ```bash
-python3 -m venv research/real44/.venv
-research/real44/.venv/bin/python -m pip install -r research/real44/requirements.txt
+python3 -m venv real44data/.venv
+real44data/.venv/bin/python -m pip install -r real44data/requirements.txt
 bash scripts/install_julia_rb5.sh
-research/real44/.venv/bin/python research/real44/prepare.py --verify-only
-RWHE_PYTHON=research/real44/.venv/bin/python bash research/real44/reproduce.sh
+real44data/.venv/bin/python real44data/prepare.py --verify-only
+RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
 ```
 
-새 결과는 `research/real44/.work/reproduction/`에 생성됩니다. 기존 결과를
+새 결과는 `real44data/.work/reproduction/`에 생성됩니다. 기존 결과를
 덮어쓰지 않으며, 다시 실행할 때는 새 출력 경로를 지정합니다.
 
 ```bash
-RWHE_PYTHON=research/real44/.venv/bin/python bash research/real44/reproduce.sh research/real44/.work/run2
+RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh real44data/.work/run2
 ```
 
 재현 절차는 44쌍의 hash/매핑 확인, 75개 cutoff의 LS SDP 및 bounds 계산,
@@ -65,7 +65,7 @@ RWHE_PYTHON=research/real44/.venv/bin/python bash research/real44/reproduce.sh r
 이 단계는 인증 실험의 고정 후보를 변경하지 않습니다.
 
 ```bash
-bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl research/real44/data/combined research/real44/.work/refit eye_in_hand
+bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl real44data/data/combined real44data/.work/refit eye_in_hand
 ```
 
 원본 이미지로부터 보드 pose를 다시 추출하는 코드는 기존
@@ -73,7 +73,7 @@ bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl research/real44/data/combined
 `hardware/requirements-gopro.txt`를 참조하십시오.
 
 ```bash
-python3 -m hardware.rb5_gopro --config hardware/rb5.gopro.json import --manifest research/real44/data/manifest.json --output research/real44/.work/reimport
+python3 -m hardware.rb5_gopro --config hardware/rb5.gopro.json import --manifest real44data/data/manifest.json --output real44data/.work/reimport
 ```
 
 ## 확인할 결과와 해석
