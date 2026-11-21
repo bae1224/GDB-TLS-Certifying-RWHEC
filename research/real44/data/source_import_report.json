@@ -1,0 +1,130 @@
+{
+  "accepted_sample_ids": [
+    "pose001",
+    "pose002",
+    "pose003",
+    "pose005",
+    "pose006",
+    "pose008",
+    "pose009",
+    "pose011",
+    "pose012",
+    "pose013",
+    "pose014",
+    "pose015",
+    "pose016",
+    "pose022",
+    "pose023",
+    "pose024",
+    "pose025",
+    "pose026",
+    "pose027",
+    "pose028",
+    "pose029",
+    "pose030",
+    "pose031",
+    "pose032",
+    "pose034",
+    "pose035",
+    "pose036",
+    "pose037",
+    "pose038",
+    "pose039",
+    "pose040",
+    "pose041",
+    "pose048",
+    "pose050",
+    "pose053",
+    "pose055",
+    "pose056",
+    "pose057",
+    "pose058",
+    "pose059",
+    "pose060",
+    "pose062",
+    "pose063",
+    "pose064"
+  ],
+  "rejected": [
+    {
+      "sample_id": "pose004",
+      "reason": "Board reprojection RMS 1.134 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose007",
+      "reason": "Board reprojection RMS 1.594 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose010",
+      "reason": "Board reprojection RMS 1.106 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose017",
+      "reason": "Board reprojection RMS 1.062 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose018",
+      "reason": "Board reprojection RMS 1.103 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose019",
+      "reason": "Board reprojection RMS 1.203 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose020",
+      "reason": "Board reprojection RMS 1.152 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose021",
+      "reason": "Board reprojection RMS 1.057 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose033",
+      "reason": "Board reprojection RMS 1.436 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose042",
+      "reason": "Board reprojection RMS 1.520 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose043",
+      "reason": "Board reprojection RMS 1.542 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose044",
+      "reason": "Board reprojection RMS 1.685 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose045",
+      "reason": "Board reprojection RMS 1.224 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose046",
+      "reason": "Board reprojection RMS 1.103 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose047",
+      "reason": "Board image area is below intrinsic detection minimum"
+    },
+    {
+      "sample_id": "pose049",
+      "reason": "Board reprojection RMS 1.108 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose051",
+      "reason": "Board reprojection RMS 1.309 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose052",
+      "reason": "Board reprojection RMS 1.206 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose054",
+      "reason": "Board reprojection RMS 1.166 px exceeds threshold"
+    },
+    {
+      "sample_id": "pose061",
+      "reason": "Board reprojection RMS 1.214 px exceeds threshold"
+    }
+  ]
+}

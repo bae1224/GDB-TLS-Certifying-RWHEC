@@ -1,0 +1,6 @@
+mount = "eye_in_hand"
+units = "metres"
+target_type = "charuco"
+reference_type = "none"
+hand_frame = "urdf_tip"
+columns = "qw,qx,qy,qz,tx,ty,tz"

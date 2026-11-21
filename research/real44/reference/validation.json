@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "original_files_unchanged": 1606,
+  "preserved_packet_files": 3147,
+  "inputs_unchanged": 375,
+  "code_hashes_checked": 6,
+  "diagnostics_independently_reconstructed": 75,
+  "k_values_independently_reconstructed": 357,
+  "timed_calls_checked": 324,
+  "max_absolute_errors": {
+    "q": 3.596622999424426e-12,
+    "gamma": 7.275957614183426e-11,
+    "score": 1.7548185127225224e-12,
+    "constraint_identity": 8.811866791802458e-10,
+    "centering_identity": 1.000088900582341e-10,
+    "scaled_dual_relative": 1.2903242066739167e-13
+  },
+  "script_sha256": "eb3eb61751b9e794f4931a4703c23034f3c60ef6538ede6ec792f367c22b0eb4",
+  "numerical_only": true
+}

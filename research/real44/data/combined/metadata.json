@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "synthetic": false,
+  "units": "metres",
+  "created_utc": "2026-10-28T05:13:53.402538+00:00",
+  "config": {
+    "mount": "eye_in_hand",
+    "robot": {
+      "ip": "",
+      "port": 5001,
+      "timeout_s": 2.0,
+      "tcp_description": "Enter the active pendant TCP name and offset before collecting",
+      "pose_source": "urdf_fk",
+      "kinematics": {
+        "urdf_path": "hardware/models/rainbow/rb5_850e.urdf",
+        "base_link": "link0",
+        "tip_link": "tcp",
+        "joint_names": [
+          "base",
+          "shoulder",
+          "elbow",
+          "wrist1",
+          "wrist2",
+          "wrist3"
+        ],
+        "joint_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "joint_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "model_matches_robot": true
+      },
+      "transport": "ros2",
+      "ros2": {
+        "state_topic": "/rbpodo_hardware/measured_feedback",
+        "max_feedback_age_s": 0.2
+      },
+      "controller_version": "25040302 [7.4.2]",
+      "ui_version": "7.4.2"
+    },
+    "camera": {
+      "type": "gopro_saved_images",
+      "intrinsics_path": "hardware/intrinsics/2026-10-27/fisheye.json",
+      "validation_path": "hardware/intrinsics/2026-10-27/validation.json",
+      "max_ray_angle_deg": 75.0
+    },
+    "board": {
+      "squares_x": 14,
+      "squares_y": 9,
+      "square_length_m": 0.04,
+      "marker_length_m": 0.024,
+      "dictionary": "DICT_4X4_250",
+      "legacy_pattern": true,
+      "paper_width_mm": 600,
+      "paper_height_mm": 400,
+      "marker_ids": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "dimensions_measured": true
+    },
+    "capture": {
+      "settle_s": 0.6,
+      "max_capture_s": 1.0,
+      "max_motion_m": 0.0005,
+      "max_motion_deg": 0.1,
+      "max_joint_motion_deg": 0.1,
+      "min_corners": 20,
+      "max_reprojection_px": 1.0,
+      "min_pose_translation_m": 0.01,
+      "min_pose_rotation_deg": 5.0
+    },
+    "target": {
+      "type": "charuco"
+    },
+    "reference": {
+      "type": "none"
+    }
+  },
+  "camera": {
+    "name": "GoPro HERO13 Black",
+    "model": "fisheye",
+    "K": [
+      [
+        1739.1968695081473,
+        0.0,
+        2768.2740583791124
+      ],
+      [
+        0.0,
+        1738.9451693625008,
+        2441.1553222000184
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "D": [
+      -0.0016038777829992848,
+      -0.049008094106821484,
+      0.04025094363527586,
+      -0.014709468711849971
+    ],
+    "image_size": [
+      5568,
+      4872
+    ],
+    "pixel_orientation": "encoded_pixels_ignore_exif",
+    "camera_profile": {
+      "device_label": "HERO13_Black_01_ISO800",
+      "serial_number": null,
+      "firmware_version": "H24.01.02.10.70",
+      "capture_mode": "photo_single",
+      "digital_lens": "wide",
+      "output": "standard_jpg",
+      "zoom": 1.0,
+      "lens_accessory": "standard_lens_cover",
+      "expected_image_size": [
+        5568,
+        4872
+      ],
+      "pixel_orientation": "encoded_pixels_ignore_exif",
+      "iso_min": 100,
+      "iso_max": 800,
+      "sharpness": "low",
+      "white_balance": "fixed_to_lighting",
+      "metadata_source": "user_confirmed_same_settings_except_iso_100_800; firmware_resolution_zoom_from_exif",
+      "observed_iso": 769,
+      "observed_exposure_s": 0.008,
+      "observed_focal_length_mm": 2.71,
+      "observed_image_description": "circular fisheye image with black surround; lens settings are user declared"
+    },
+    "intrinsics_sha256": "bd0beaf5a03afb0b4a1d77a25735cc2342b513c87f3f6e5d0313f210af6c2acb",
+    "validation_sha256": "468d4966b9231909b9ecd7d0a4d520fb7602dd9886c9d6afed902997bdc223b6",
+    "validation_rms_px": 0.7681991381676434,
+    "detection_settings": {
+      "min_marker_perimeter_rate": 0.008,
+      "adaptive_thresh_win_size_max": 63,
+      "fallback_default_detector": true,
+      "min_corners": 20,
+      "min_area_ratio": 0.01
+    },
+    "max_ray_angle_deg": 75.0
+  },
+  "robot_pose": {
+    "model_name": "rb5_850e",
+    "urdf_path": "/media/bae/Workspace/Calib/Robot-World-and-Hand-Eye-Calibration-in-RB5-850/hardware/models/rainbow/rb5_850e.urdf",
+    "urdf_sha256": "38c357aaca3ea0ee2284eeb673920579b40ffaed1a40b5b77f02087516487598",
+    "base_link": "link0",
+    "tip_link": "tcp",
+    "chain_joint_names": [
+      "base",
+      "shoulder",
+      "elbow",
+      "wrist1",
+      "wrist2",
+      "wrist3"
+    ],
+    "encoder_joint_names": [
+      "base",
+      "shoulder",
+      "elbow",
+      "wrist1",
+      "wrist2",
+      "wrist3"
+    ],
+    "joint_signs": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "joint_offsets_deg": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pose_source": "urdf_fk",
+    "joint_source": "rbpodo_msgs/msg/SystemState.jnt_ang",
+    "model_matches_robot": true,
+    "hand_frame": "URDF tip_link; not the configured controller TCP",
+    "transport": "ros2",
+    "state_topic": "/rbpodo_hardware/measured_feedback",
+    "message_type": "rbpodo_msgs/msg/MeasuredFeedback",
+    "source_units": "metres/radians",
+    "record_units": "millimetres/degrees",
+    "clock_source": "driver_receive_monotonic",
+    "controller_time_note": "raw SystemState.time retained; not used for freshness",
+    "freshness_note": "same Linux boot; increasing response sequence and monotonic receipt; does not prove controller-internal sample age"
+  },
+  "synchronization": "explicit sample_id pairing; operator must take photo inside recorded stationary window",
+  "sample_count": 44
+}

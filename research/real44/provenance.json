@@ -1,0 +1,16 @@
+{
+  "scope": "Original 44-pair paper experiment only. No other acquisition or synthetic dataset is included.",
+  "observation_count": 44,
+  "source_session": "gopro_session_20261028",
+  "source_case": "real44_swapped00",
+  "source_study": "kroc_cutoff_20261119",
+  "library_changes": "Relevant original numerical functions copied verbatim; include paths adapted, unused batch entry points removed. Evaluation output path parameterized.",
+  "original_code_sha256": {
+    "research/robust_rwhe_audit_20261117/audit_relaxations.jl": "14f91b749872d21d432d6675ec9825410e1c6ed6a1b31ae70523391628b36633",
+    "research/deletion_paper_20261118/benchmark.jl": "91cb1b9cebb25f1b7c2bad0ce1d70b772105773f53f504362befc8be950eda88",
+    "research/kroc_manuscript_20261118/cascade_benchmark.jl": "bee6f816b39a1019127b0a5381ad4ccdfdae097121c16772f199be3448345a1b",
+    "research/kroc_cutoff_20261119/evaluate_study.jl": "e9f42ee669e3b6f3370e73fac05d7a3bbcf356e12fdc130f99a9ba454056f0d9"
+  },
+  "source_data_note": "Images, samples, robot records, A/B and fixed candidates are exact copies. Absolute paths inside original JSON records are historical provenance only; data/manifest.json uses portable relative paths.",
+  "rotation_constraints_sha256": "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237"
+}
