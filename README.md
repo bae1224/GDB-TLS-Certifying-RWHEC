@@ -1,14 +1,27 @@
 # RWHEC_TLS_Certification
 
-Reproduction data and code for **Grouped Deletion Bounds for Certifying
-Full-Support RWHE Candidates**. This repository contains the original **44-pair
-RB5-850 / GoPro HERO13 real-data experiment**.
+Data and code for the original **44-pair RB5-850 / GoPro HERO13 experiment**
+in the KRoC manuscript below.
 
-The certificate reuses a least-squares dual solution and checks singleton,
-pairwise, and cascade bounds for a fixed full-support candidate under truncated
-least squares (TLS). The release contains the 44 original-resolution images,
-paired robot records, processed poses, fixed X/Y, original numerical results,
-and portable reproduction scripts.
+## RWHEC
+
+Robot-world and hand-eye calibration (RWHEC) jointly estimates the camera pose
+relative to the robot hand (`X`) and the target pose relative to the robot base
+(`Y`) from paired observations satisfying `A_i X = Y B_i`.
+[Wise et al.](https://arxiv.org/abs/2507.23045v2) generalize this formulation to
+multiple sensors/targets and unknown monocular scale, using a semidefinite
+programming (SDP) relaxation to certify least-squares (LS) optimality.
+
+## KRoC paper
+
+**Grouped Deletion Bounds for Certifying Full-Support RWHE Candidates** checks
+whether a fixed LS candidate is also optimal under truncated least squares (TLS).
+For full-support candidates, whose observation costs are all below the cutoff,
+it reuses the LS dual solution and combines singleton and pairwise deletion
+bounds in a cascade. This gives a sufficient numerical certificate without
+enumerating observation-deletion sets.
+
+## Data and code
 
 Start with **[the Real44 reproduction guide](real44data/README.md)**.
 
