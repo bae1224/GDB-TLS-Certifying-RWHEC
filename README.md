@@ -41,7 +41,7 @@ LS 후보가 truncated least squares(TLS)에서도 최적인지 검사.
 | [scripts](scripts) · [src](src) | Julia 설치·실행, RWHEC LS 해 추정과 SDP 제약 |
 | [environment](environment) | 고정된 Julia 의존성 환경 |
 | [real44data](real44data) | 논문 고정 A/B/X/Y, TLS 인증 코드, 기존 결과·재현 안내 |
-| [comparisons/matched_tls](comparisons/matched_tls) | 표 3의 SSR–DRS 재구현 비교, 하한 유도·잔차 검증, 고정 합성 8건·실측 1건 |
+| [comparisons/matched_tls](comparisons/matched_tls) | 표 2의 SSR–DRS 재구현 비교, 하한 유도·잔차 검증, 고정 합성 8건·실측 1건 |
 | [docs](docs) | 프로젝트 페이지(GitHub Pages), 실험 사진·데이터 취득 영상·논문 원고 |
 
 ## 원본 이미지에서 RWHEC 해 구하기
@@ -107,7 +107,7 @@ RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
 - 상세 조건: [재현 안내](real44data/README.md)
 - 코드 출처: [UPSTREAM.json](UPSTREAM.json), [provenance.json](real44data/provenance.json)
 
-## 표 3의 기존 TLS 인증법 비교
+## 표 2의 기존 TLS 인증법 비교
 
 동일 관측·후보·정규화 전 가중치·절단 임계값에서 SSR–DRS 재구현과 제안법 비교.
 병진 무제한 조건의 하한은 후보 비용 이하 영역의 노름 상계와 전체 잔차 보정으로 검증.
