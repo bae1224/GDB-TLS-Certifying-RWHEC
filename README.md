@@ -1,87 +1,115 @@
 # Grouped Deletion Bounds for Certifying TLS Optimality in Robot-World Hand-Eye Calibration
 
-**Jaeyoung Bae · Byeongjun Kim · Kwangki Kim — Inha University**
+레인보우 로보틱스 RB5-850·GoPro HERO 13 광각 카메라로 수집한 **논문 44쌍 데이터와 재현 코드**.
 
-[Project website](https://i-m-bedded.github.io/rwhec-tls-certification/) · [Manuscript](https://i-m-bedded.github.io/rwhec-tls-certification/assets/paper.pdf) · [Real-data reproduction](real44data/README.md) · [Public release](https://github.com/I-M-bedded/rwhec-tls-certification)
+원본 이미지·로봇 기록의 pose 추출, RWHEC 해 추정, 논문 고정 후보의 TLS 인증 코드 포함.
 
-This repository accompanies the manuscript. It contains the 44-observation real-data experiment, fixed calibration candidates, LS SDP implementation, singleton/pairwise deletion bounds, and cascade certification. The project website, with an annotated experimental photograph and a 4× data-acquisition video, is hosted from the [public release repository](https://github.com/I-M-bedded/rwhec-tls-certification).
+## Robot–World and Hand–Eye Calibration (RWHEC)
 
-## Research idea
+Robot–World and Hand–Eye Calibration: 관측 자세 `A_i`, `B_i`에서
+`A_i X = Y B_i`를 만족하는 두 고정 변환 추정.
 
-A least-squares (LS) optimum need not minimize a truncated least-squares (TLS) objective. For a feasible full-support candidate, we reuse an LS dual solution to bound the benefit of deleting observations. Singleton and pairwise spectral bounds yield sufficient numerical certification conditions without enumerating deletion sets. A cascade tests singleton first and computes pairwise bounds only when needed.
+이 저장소의 eye-in-hand 구성:
 
-The real-data study fixes the candidate and weights: pairwise and cascade certify 16 tested cutoff settings from 3.30 to 4.05 where singleton is inconclusive. The paper also reports broad-motion and limited-motion synthetic experiments; their reproduction code is not included in this repository.
+- `X`: 로봇 말단 기준 카메라 자세
+- `Y`: 로봇 베이스 기준 보드 자세
 
-## Coordinate convention: AᵢX = YBᵢ
+[Wise 등의 연구](https://arxiv.org/abs/2507.23045v2)는 다중 센서·타깃과 단안 scale까지
+다루며, SDP relaxation으로 least squares(LS) 해의 전역 최적성을 인증.
 
-`a T b` maps coordinates expressed in frame b into frame a.
+이 저장소는 단일 카메라·보드와 알려진 scale에 해당하는 보정 코드 제공.
 
-| Symbol | Notation | Meaning |
-| --- | --- | --- |
-| Aᵢ | base T hand,i | Observed robot hand pose from URDF forward kinematics |
-| X | hand T camera | Fixed hand–camera transform to estimate |
-| Y | base T board | Fixed base–board transform to estimate |
-| Bᵢ | board T camera,i | Inverse of the observed camera T board pose |
+## KRoC 논문
 
-CSV columns are `qw,qx,qy,qz,tx,ty,tz`; translation is in metres. The hand frame is the URDF tip frame. Image/robot pairing is defined by sample IDs and the manifest, never inferred from image filenames.
+LS 후보가 truncated least squares(TLS)에서도 최적인지 검사.
 
-## Quick start: reproduce the fixed-candidate certificate
+- 모든 관측 비용이 cutoff 미만인 full-support 후보의 LS dual 해 재사용
+- singleton·pairwise 제거 bounds를 cascade로 결합
+- 관측 제거 조합의 직접 열거 없이 수치 인증의 충분조건 검사
 
-Run from the repository root on Linux x86_64. Requirements: Python 3.10+, Julia 1.10.10. Julia dependencies are pinned in `environment/Manifest.toml`.
+## 폴더 구성
+
+| 경로 | 내용 |
+|---|---|
+| [real44data/data](real44data/data) | 원본 JPG 44장, 대응 로봇 기록, pose와 manifest |
+| [hardware/rb5_gopro](hardware/rb5_gopro) | GoPro 이미지 처리·보드 pose 추정·로봇 측정 연동 |
+| [hardware/rb5](hardware/rb5) | RB5 URDF FK, 로봇 상태 읽기, 좌표 변환·CSV 생성 |
+| [hardware/models/rainbow](hardware/models/rainbow) | RB5-850E URDF와 출처·라이선스; FK용이며 mesh는 제외 |
+| [hardware/intrinsics/2026-10-27](hardware/intrinsics/2026-10-27) | GoPro fisheye 내부 파라미터와 검증 자료 |
+| [scripts](scripts) · [src](src) | Julia 설치·실행, RWHEC LS 해 추정과 SDP 제약 |
+| [environment](environment) | 고정된 Julia 의존성 환경 |
+| [real44data](real44data) | 논문 고정 A/B/X/Y, TLS 인증 코드, 기존 결과·재현 안내 |
+| [comparisons/matched_tls](comparisons/matched_tls) | 표 3의 SSR–DRS 재구현 비교, 하한 유도·잔차 검증, 고정 합성 8건·실측 1건 |
+
+## 원본 이미지에서 RWHEC 해 구하기
+
+- 실행 위치: 저장소 루트
+- 환경: Linux x86_64, Python 3.10 이상, Julia 1.10.10
 
 ```bash
 python3 -m venv real44data/.venv
-real44data/.venv/bin/python -m pip install -r real44data/requirements.txt
+real44data/.venv/bin/python -m pip install \
+  -r hardware/requirements-gopro.txt \
+  -r real44data/requirements.txt
+
 bash scripts/install_julia_rb5.sh
 real44data/.venv/bin/python real44data/prepare.py --verify-only
-RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
-```
 
-Outputs go to `real44data/.work/reproduction/`. Use a fresh output directory for subsequent runs. The protocol checks 75 cutoffs, performs 324 timing calls, independently reconstructs costs/bounds with NumPy, and compares decisions against the released references. Stored-data reproduction requires neither ROS nor connected hardware.
-
-## Reconstruct poses and estimate X/Y from images
-
-```bash
-real44data/.venv/bin/python -m pip install -r hardware/requirements-gopro.txt
 real44data/.venv/bin/python -m hardware.rb5_gopro \
   --config hardware/rb5.gopro.json import \
   --manifest real44data/data/manifest.json \
   --output real44data/.work/from_images
+
 bash scripts/julia_rb5.sh scripts/calibrate_rb5.jl \
   real44data/.work/from_images/combined \
   real44data/.work/solution eye_in_hand
 ```
 
-This estimates a new solution. The TLS reproduction script continues to use the frozen paper candidates in `real44data/input`; it does not automatically certify newly estimated X/Y.
+이미지와 로봇 기록은 `sample_id`로 대응.
 
-## Contents
+ChArUco/fisheye 보드 pose와
+관절각·URDF FK로 `A = T_base_hand`, `B = inverse(T_camera_board)`를 구성한 뒤 LS 해 추정.
 
-| Directory | Purpose |
-| --- | --- |
-| `real44data/data/` | 44 original images, robot records, poses and pairing manifest |
-| `real44data/input/` | Frozen A/B/X/Y used for paper certification |
-| `real44data/lib/` | Numerical certification implementation |
-| `real44data/reference/` | Released reference results and plots |
-| `hardware/` | Pose extraction, intrinsics, robot FK and acquisition utilities |
-| `scripts/`, `src/`, `environment/` | Julia solver, constraints and pinned environment |
+출력 폴더: `real44data/.work/solution/`. 재실행 시 새 출력 폴더 지정.
 
-The original 64 observations were filtered using image quality criteria (19 reprojection-RMS exclusions and one board-area exclusion), yielding 44 pairs. This filtering is not an RWHE outlier classification.
+- 추정 변환: `T_hand_camera.csv`, `T_base_board.csv`
+- 결과 보고서·잔차: `report.toml`, `residuals.csv`
 
-## Interpretation and reproducibility limits
+저장 데이터 재현에는 로봇·카메라 연결이나 ROS 불필요.
 
-Certification is a floating-point sufficient condition for the stated numerical objective, with the full-support and gap conditions specified in the manuscript. It does not measure absolute physical accuracy; an inconclusive result does not establish suboptimality. The 75 cutoffs are sensitivity settings on one dataset, not 75 independent experiments. Runtime varies by machine and should be reported separately from the released reference timings.
+실시간 로봇 측정용 ROS 2/rbpodo 연동 코드 포함. 장비 연결 시 ROS 2와
+`rbpodo_ros2` 드라이버 등 별도 설치 필요.
 
-The manuscript has no publication venue, DOI or acceptance status asserted here. The project website is served by GitHub Pages from the `docs/` folder of [I-M-bedded/rwhec-tls-certification](https://github.com/I-M-bedded/rwhec-tls-certification).
+## 논문 TLS 인증 재현
 
-## Provenance and license
-
-Released under the MIT license (© 2026 Jaeyoung Bae). Third-party model and solver provenance is recorded in `UPSTREAM.json`, `real44data/provenance.json`, and the model license files. The [public release](https://github.com/I-M-bedded/rwhec-tls-certification) is an export of this repository with source-path metadata sanitized and the SHA256 manifest regenerated.
-
-```bibtex
-@unpublished{bae_grouped_deletion_bounds,
-  title = {Grouped Deletion Bounds for Certifying TLS
-    Optimality in Robot-World Hand-Eye Calibration},
-  author = {Bae, Jaeyoung and Kim, Byeongjun and Kim, Kwangki},
-  note = {Manuscript}
-}
+```bash
+RWHE_PYTHON=real44data/.venv/bin/python bash real44data/reproduce.sh
 ```
+
+인증 대상: `real44data/input`의 **논문용 고정 X/Y**.
+
+새로 추정한 해의 자동 인증은 미포함.
+
+- 검증: 75개 cutoff, 324회 시간 측정, 독립적인 NumPy 검증
+- 결과 저장: `real44data/.work/reproduction/`
+
+**기존 44쌍 결과**
+
+- 기존 44쌍의 AX=YB 일관성 RMS: **7.777714 mm / 0.959949°**.
+- 시험한 cutoff **3.30–4.05의 16개 설정**에서 singleton은 미인증, pairwise·cascade는 인증.
+
+인증 범위는 지정된 목적함수의 부동소수점 수치 검증으로, 물리적 절대 정확도 보장은 제외.
+미인증만으로 비최적성을 의미하지 않음.
+
+- 상세 조건: [재현 안내](real44data/README.md)
+- 코드 출처: [UPSTREAM.json](UPSTREAM.json), [provenance.json](real44data/provenance.json)
+
+## 표 3의 기존 TLS 인증법 비교
+
+동일 관측·후보·정규화 전 가중치·절단 임계값에서 SSR–DRS 재구현과 제안법 비교.
+병진 무제한 조건의 하한은 후보 비용 이하 영역의 노름 상계와 전체 잔차 보정으로 검증.
+
+- [하한의 성립 조건과 유도](comparisons/matched_tls/LOWER_BOUND.md)
+- [검증 코드](comparisons/matched_tls/verified_bound.jl) · [재현 절차와 결과](comparisons/matched_tls/README.md)
+
+결과는 명시한 재구현·9건·30초 예산에 한정. 공식 DRS/STRIDE 구현의 성능으로 일반화하지 않음.
