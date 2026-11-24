@@ -1,0 +1,455 @@
+folder = "cases/holdout_broad_n44_eta8_s00"
+motion = "broad"
+name = "holdout_broad_n44_eta8_s00"
+protocol_sha256 = "b12425284ad7e05c0d570adaf0bd946ed0f64034c8b7be6766120459db313d07"
+
+[[runs]]
+N = 44
+anchor_seconds = 0.011700944
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.000844178
+full_support = true
+input_seconds = 0.003242545
+lower = 8.829703727854886
+mode = "single"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 1
+scores = [0.7473517066914559, 0.883093773960766, 1.0319975131722663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.015787667
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.009778689
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.015613132
+full_support = true
+input_seconds = 0.001512633
+lower = 8.829703727854886
+mode = "pair"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 1
+scores = [0.7473517066914559, 0.7967182053527402, 0.9845711096508304, 1.0546087071352663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.026904454
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.013421357
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.017389349
+full_support = true
+input_seconds = 0.001803524
+lower = 8.829703727854886
+mode = "cascade"
+pair_eigenvalues = 946
+reason = "pair_stage_inconclusive"
+relative_gap = 3.6796602547096106e-8
+repeat = 1
+scores = [0.7473517066914559, 0.883093773960766, 0.9845711096508304, 1.0546087071352663, 1.3161749310562165, 1.4698222648832404, 1.6160536965750247, 1.7545651148477244]
+sdp_status = "OPTIMAL"
+status = "inconclusive"
+total_seconds = 0.03261423
+upper = 8.829704052757997
+[[runs]]
+N = 44
+affine_residual_correction = 0.0
+bounded_shift = 0.1962155594600871
+budget_checked_between_iterations = true
+candidate_rotation_representation_change = 1.4432899320127037e-15
+case = "holdout_broad_n44_eta8_s00"
+constraint_block_rank = 40
+cost_error = 2.2737367544323206e-12
+embedding_error = 1.931128436256538e-12
+iterations = 84
+lower = 0.0
+lower_bound_method = "zero fallback; enclosed affine and full-slack PSD residuals on a derived TLS sublevel set"
+mandatory_nullspace_error = 8.271419837517536e-11
+mode = "ssr_drs_rwhe"
+moment_size = 1125
+nominal_upper = 8.829704052757997
+official_implementation = false
+positive_bound_validation_performed = false
+precondition = "invertible LS Hessian whitening and centering"
+psd_residual_correction = 0.0
+relative_affine_error = 1.1102230246251565e-16
+relative_gap = 1.0000000000000007
+relaxation_parameter = 1.8
+repeat = 1
+schur_min_eigenvalue = -0.19621555835130186
+schur_screening_value_not_a_bound = -52.97820159202146
+setup_seconds = 0.355794195
+status = "time_limit"
+sublevel_left_inverse_errors = [4.4372904364382557e-14, 4.331763521990129e-14, 4.93309832042216e-14, 5.038379851716835e-14, 4.488779590566239e-14, 6.002073899157434e-14, 3.8601447002807965e-14, 3.500121934301502e-14, 5.861666155348231e-14]
+sublevel_norm_squared_bound = 4759.955632138069
+sublevel_partition_groups = 9
+sublevel_translation_bound = 4.057437447151637
+target = 8.82969963790597
+time_budget_seconds = 30.0
+total_seconds = 30.479172413
+translation_block_positive = true
+translation_domain = "unbounded"
+upper = 8.8297040527698
+
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 1
+    lower = 0.0
+    seconds = 0.864961589
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 10
+    lower = 0.0
+    seconds = 4.552952008
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 20
+    lower = 0.0
+    seconds = 7.910726444
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 30
+    lower = 0.0
+    seconds = 11.420442162
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 40
+    lower = 0.0
+    seconds = 14.94234679
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 50
+    lower = 0.0
+    seconds = 18.451375017
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 60
+    lower = 0.0
+    seconds = 22.121322965
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 70
+    lower = 0.0
+    seconds = 25.383933192
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 80
+    lower = 0.0
+    seconds = 28.979170782
+    translation_pd = true
+[[runs]]
+N = 44
+affine_residual_correction = 0.0
+bounded_shift = 0.1962155594600871
+budget_checked_between_iterations = true
+candidate_rotation_representation_change = 1.4432899320127037e-15
+case = "holdout_broad_n44_eta8_s00"
+constraint_block_rank = 40
+cost_error = 2.2737367544323206e-12
+embedding_error = 1.931128436256538e-12
+iterations = 85
+lower = 0.0
+lower_bound_method = "zero fallback; enclosed affine and full-slack PSD residuals on a derived TLS sublevel set"
+mandatory_nullspace_error = 8.271419837517536e-11
+mode = "ssr_drs_rwhe"
+moment_size = 1125
+nominal_upper = 8.829704052757997
+official_implementation = false
+positive_bound_validation_performed = false
+precondition = "invertible LS Hessian whitening and centering"
+psd_residual_correction = 0.0
+relative_affine_error = 1.1102230246251565e-16
+relative_gap = 1.0000000000000007
+relaxation_parameter = 1.8
+repeat = 2
+schur_min_eigenvalue = -0.19621555835130186
+schur_screening_value_not_a_bound = -52.97820159202146
+setup_seconds = 0.126739446
+status = "time_limit"
+sublevel_left_inverse_errors = [4.4372904364382557e-14, 4.331763521990129e-14, 4.93309832042216e-14, 5.038379851716835e-14, 4.488779590566239e-14, 6.002073899157434e-14, 3.8601447002807965e-14, 3.500121934301502e-14, 5.861666155348231e-14]
+sublevel_norm_squared_bound = 4759.955632138069
+sublevel_partition_groups = 9
+sublevel_translation_bound = 4.057437447151637
+target = 8.82969963790597
+time_budget_seconds = 30.0
+total_seconds = 30.40334935
+translation_block_positive = true
+translation_domain = "unbounded"
+upper = 8.8297040527698
+
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 1
+    lower = 0.0
+    seconds = 0.723459084
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 10
+    lower = 0.0
+    seconds = 4.251380892
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 20
+    lower = 0.0
+    seconds = 7.815341112
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 30
+    lower = 0.0
+    seconds = 11.307736182
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 40
+    lower = 0.0
+    seconds = 14.828955567
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 50
+    lower = 0.0
+    seconds = 18.251123568
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 60
+    lower = 0.0
+    seconds = 21.561847041
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 70
+    lower = 0.0
+    seconds = 25.058052118
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 80
+    lower = 0.0
+    seconds = 28.544626904
+    translation_pd = true
+[[runs]]
+N = 44
+anchor_seconds = 0.008900079
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.000844177
+full_support = true
+input_seconds = 0.001357095
+lower = 8.829703727854886
+mode = "single"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 2
+scores = [0.7473517066914559, 0.883093773960766, 1.0319975131722663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.011101351
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.010149128
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.016469182
+full_support = true
+input_seconds = 0.002557467
+lower = 8.829703727854886
+mode = "pair"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 2
+scores = [0.7473517066914559, 0.7967182053527402, 0.9845711096508304, 1.0546087071352663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.029175777
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.009516292
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.016500052
+full_support = true
+input_seconds = 0.001624241
+lower = 8.829703727854886
+mode = "cascade"
+pair_eigenvalues = 946
+reason = "pair_stage_inconclusive"
+relative_gap = 3.6796602547096106e-8
+repeat = 2
+scores = [0.7473517066914559, 0.883093773960766, 0.9845711096508304, 1.0546087071352663, 1.3161749310562165, 1.4698222648832404, 1.6160536965750247, 1.7545651148477244]
+sdp_status = "OPTIMAL"
+status = "inconclusive"
+total_seconds = 0.027640585
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.009065114
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.017386972
+full_support = true
+input_seconds = 0.001620679
+lower = 8.829703727854886
+mode = "cascade"
+pair_eigenvalues = 946
+reason = "pair_stage_inconclusive"
+relative_gap = 3.6796602547096106e-8
+repeat = 3
+scores = [0.7473517066914559, 0.883093773960766, 0.9845711096508304, 1.0546087071352663, 1.3161749310562165, 1.4698222648832404, 1.6160536965750247, 1.7545651148477244]
+sdp_status = "OPTIMAL"
+status = "inconclusive"
+total_seconds = 0.028072765
+upper = 8.829704052757997
+[[runs]]
+N = 44
+affine_residual_correction = 0.0
+bounded_shift = 0.1962155594600871
+budget_checked_between_iterations = true
+candidate_rotation_representation_change = 1.4432899320127037e-15
+case = "holdout_broad_n44_eta8_s00"
+constraint_block_rank = 40
+cost_error = 2.2737367544323206e-12
+embedding_error = 1.931128436256538e-12
+iterations = 82
+lower = 0.0
+lower_bound_method = "zero fallback; enclosed affine and full-slack PSD residuals on a derived TLS sublevel set"
+mandatory_nullspace_error = 8.271419837517536e-11
+mode = "ssr_drs_rwhe"
+moment_size = 1125
+nominal_upper = 8.829704052757997
+official_implementation = false
+positive_bound_validation_performed = false
+precondition = "invertible LS Hessian whitening and centering"
+psd_residual_correction = 0.0
+relative_affine_error = 1.1102230246251565e-16
+relative_gap = 1.0000000000000007
+relaxation_parameter = 1.8
+repeat = 3
+schur_min_eigenvalue = -0.19621555835130186
+schur_screening_value_not_a_bound = -52.97820159202146
+setup_seconds = 0.35680575
+status = "time_limit"
+sublevel_left_inverse_errors = [4.4372904364382557e-14, 4.331763521990129e-14, 4.93309832042216e-14, 5.038379851716835e-14, 4.488779590566239e-14, 6.002073899157434e-14, 3.8601447002807965e-14, 3.500121934301502e-14, 5.861666155348231e-14]
+sublevel_norm_squared_bound = 4759.955632138069
+sublevel_partition_groups = 9
+sublevel_translation_bound = 4.057437447151637
+target = 8.82969963790597
+time_budget_seconds = 30.0
+total_seconds = 30.453828845
+translation_block_positive = true
+translation_domain = "unbounded"
+upper = 8.8297040527698
+
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 1
+    lower = 0.0
+    seconds = 0.871618757
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 10
+    lower = 0.0
+    seconds = 4.171372602
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 20
+    lower = 0.0
+    seconds = 7.700001866
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 30
+    lower = 0.0
+    seconds = 11.367042998
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 40
+    lower = 0.0
+    seconds = 15.124584465
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 50
+    lower = 0.0
+    seconds = 18.878904739
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 60
+    lower = 0.0
+    seconds = 22.416263036
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 70
+    lower = 0.0
+    seconds = 26.115483764
+    translation_pd = true
+    [[runs.history]]
+    gap = 1.0000000000000007
+    iteration = 80
+    lower = 0.0
+    seconds = 29.543090626
+    translation_pd = true
+[[runs]]
+N = 44
+anchor_seconds = 0.010521944
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.001245488
+full_support = true
+input_seconds = 0.001492449
+lower = 8.829703727854886
+mode = "single"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 3
+scores = [0.7473517066914559, 0.883093773960766, 1.0319975131722663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.013259881
+upper = 8.829704052757997
+[[runs]]
+N = 44
+anchor_seconds = 0.008565257
+case = "holdout_broad_n44_eta8_s00"
+check_seconds = 0.01758169
+full_support = true
+input_seconds = 0.001434271
+lower = 8.829703727854886
+mode = "pair"
+reason = "sufficient_condition_failed"
+relative_gap = 3.6796602547096106e-8
+repeat = 3
+scores = [0.7473517066914559, 0.7967182053527402, 0.9845711096508304, 1.0546087071352663]
+sdp_status = "OPTIMAL"
+sets = 0
+status = "inconclusive"
+total_seconds = 0.027581218
+upper = 8.829704052757997
+
+[source_sha256]
+"common.jl" = "e3df41231746ffad2c60d78815860122ac40f42c7e0aee1bb3b47f9825557627"
+"rotation_sdp_constraints.jl" = "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237"
+"ssr_drs.jl" = "5324bf072daf194b3b71856c1c0f3a0b5881d3a9182b91c76f4f3698f4c22cdc"
+"verified_bound.jl" = "9ec79a4b6a1e9a4aa33ac14d1938b9e8319e5b7df830091ea3f37d430345cae3"

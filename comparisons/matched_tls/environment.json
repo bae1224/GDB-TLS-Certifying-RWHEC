@@ -1,0 +1,16 @@
+{
+  "Architecture": "x86_64",
+  "CPU(s)": "16",
+  "Model name": "AMD Ryzen 7 7840HS with Radeon 780M Graphics",
+  "Thread(s) per core": "2",
+  "Core(s) per socket": "8",
+  "kernel": "6.8.0-138-generic",
+  "julia": "1.10.10",
+  "COSMO": "0.8.11",
+  "JuMP": "1.31.2",
+  "BLAS_threads": 1,
+  "Julia_threads": 1,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "measurement_date": "2026-11-24",
+  "julia_manifest_sha256": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68"
+}

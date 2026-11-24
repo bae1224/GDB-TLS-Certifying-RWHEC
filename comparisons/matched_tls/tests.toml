@@ -1,0 +1,70 @@
+corrupted_affine_lower = 0.36166660706180337
+nonzero_control_lower = 0.3749999403951372
+nonzero_known_optimum = 0.375
+passed = true
+scope = "Analytical positive/negative controls and fixed-input enclosures; excluded from Table 3. No physical-accuracy claim."
+tiny_cross_term_lower = 0.37499865493718804
+
+[[sublevel_cases]]
+case = "holdout_broad_n44_eta4_s00"
+largest_left_inverse_error = 1.1299252637797976e-13
+partition_groups = 3
+sublevel_norm_squared_bound = 1920.5105884596142
+sublevel_translation_bound = 2.4385109212003506
+upper = 2.6123868046714085
+[[sublevel_cases]]
+case = "holdout_broad_n44_eta8_s00"
+largest_left_inverse_error = 6.002073899157434e-14
+partition_groups = 9
+sublevel_norm_squared_bound = 4759.955632138069
+sublevel_translation_bound = 4.057437447151637
+upper = 8.8297040527698
+[[sublevel_cases]]
+case = "holdout_broad_n80_eta4_s00"
+largest_left_inverse_error = 1.2615757334667404e-13
+partition_groups = 5
+sublevel_norm_squared_bound = 3501.5644355352924
+sublevel_translation_bound = 2.4572745933304536
+upper = 4.900564531686758
+[[sublevel_cases]]
+case = "holdout_broad_n80_eta8_s00"
+largest_left_inverse_error = 9.309789038707716e-14
+partition_groups = 16
+sublevel_norm_squared_bound = 11090.174634750774
+sublevel_translation_bound = 4.653237873271523
+upper = 15.558091821384371
+[[sublevel_cases]]
+case = "holdout_limited_n44_eta4_s00"
+largest_left_inverse_error = 2.829765262783502e-12
+partition_groups = 3
+sublevel_norm_squared_bound = 932437.1402561174
+sublevel_translation_bound = 58.756312198527255
+upper = 2.426109056251218
+[[sublevel_cases]]
+case = "holdout_limited_n44_eta8_s00"
+largest_left_inverse_error = 1.4669854461833834e-12
+partition_groups = 12
+sublevel_norm_squared_bound = 3.829515162398524e6
+sublevel_translation_bound = 119.08913814323382
+upper = 11.123034302064012
+[[sublevel_cases]]
+case = "holdout_limited_n80_eta4_s00"
+largest_left_inverse_error = 2.1422991093050995e-12
+partition_groups = 6
+sublevel_norm_squared_bound = 1.3328959245694377e6
+sublevel_translation_bound = 52.35854791976503
+upper = 5.329595896902478
+[[sublevel_cases]]
+case = "holdout_limited_n80_eta8_s00"
+largest_left_inverse_error = 1.952798477130503e-12
+partition_groups = 16
+sublevel_norm_squared_bound = 5.383479394664632e6
+sublevel_translation_bound = 105.24234617943048
+upper = 15.864781942801873
+[[sublevel_cases]]
+case = "real44_tau2_4"
+largest_left_inverse_error = 1.4177418883240778e-13
+partition_groups = 5
+sublevel_norm_squared_bound = 7598.403444336002
+sublevel_translation_bound = 5.193800950398037
+upper = 4.099013074556216

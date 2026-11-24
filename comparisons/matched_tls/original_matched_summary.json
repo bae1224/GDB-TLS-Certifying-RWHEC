@@ -1,0 +1,84 @@
+{
+  "cases": 9,
+  "measured_calls": 108,
+  "repeats": 3,
+  "all_inputs_unchanged": true,
+  "all_repeats_consistent": true,
+  "groups": {
+    "broad": {
+      "cases": 4,
+      "single": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.047197818,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.167853097,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.10846284,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 123.122704194,
+        "timeout_repeats": 12
+      }
+    },
+    "limited": {
+      "cases": 4,
+      "single": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.04752071,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.171823254,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.110485888,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 123.690936019,
+        "timeout_repeats": 12
+      }
+    },
+    "real": {
+      "cases": 1,
+      "single": {
+        "certified": 0,
+        "sum_case_medians_seconds": 0.011522794,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 1,
+        "sum_case_medians_seconds": 0.025240916,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 1,
+        "sum_case_medians_seconds": 0.02551756,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 30.14598345,
+        "timeout_repeats": 3
+      }
+    }
+  },
+  "protocol_sha256": "d82ffb16b77867d49c623384d8cdc2b1671a45b5ff70a46cfe0a268db4a58f2c",
+  "amendment_sha256": "bcc7bbd90972267523fbc53b0d0f085692aad2284921c8e9844ae74530126607",
+  "source_sha256": "2b07629914a147b3de178d27ff9ed403c5670d3f76756cca274c12d9acae280f",
+  "selection": "All 2 motion x 2 N x 2 endpoint noise strata, replicate index 0; plus original real44 tau2=4. No selection by certification outcome.",
+  "official_DRS_or_STRIDE_run": false,
+  "scope": "Matched nine-case implementation/budget comparison of a published TLS SSR/SOS formulation, not an official DRS/STRIDE benchmark or a 280-case external benchmark."
+}

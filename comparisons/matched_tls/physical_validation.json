@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "saved_slacks_checked": 27,
+  "physical_pose_checks": 540,
+  "scope": "Numerical identity spot checks only; global lower-bound justification is in LOWER_BOUND.md and verified_bound.jl.",
+  "results": [
+    {
+      "case": "holdout_broad_n44_eta4_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 5.829052434603685e-11,
+      "slack_sha256": "156842bf7d4936a282f207b872f8b50dea5bcc165673e603d6a723b150b26342"
+    },
+    {
+      "case": "holdout_broad_n44_eta4_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 2.6103091845177662e-11,
+      "slack_sha256": "156842bf7d4936a282f207b872f8b50dea5bcc165673e603d6a723b150b26342"
+    },
+    {
+      "case": "holdout_broad_n44_eta4_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 1.472345200259319e-11,
+      "slack_sha256": "156842bf7d4936a282f207b872f8b50dea5bcc165673e603d6a723b150b26342"
+    },
+    {
+      "case": "holdout_broad_n44_eta8_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 3.9001735477450515e-12,
+      "slack_sha256": "a4b6eb83b9e1441b67888e52fd1eaad91f06403f729f750030e3a893542dd644"
+    },
+    {
+      "case": "holdout_broad_n44_eta8_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 4.468279635093359e-11,
+      "slack_sha256": "a4b6eb83b9e1441b67888e52fd1eaad91f06403f729f750030e3a893542dd644"
+    },
+    {
+      "case": "holdout_broad_n44_eta8_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 1.245065503239741e-11,
+      "slack_sha256": "a4b6eb83b9e1441b67888e52fd1eaad91f06403f729f750030e3a893542dd644"
+    },
+    {
+      "case": "holdout_broad_n80_eta4_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 1.937894453771719e-11,
+      "slack_sha256": "42de9020b72ac41609c6ec867e81b20573e4f45c8851be4958f0a553a98f3220"
+    },
+    {
+      "case": "holdout_broad_n80_eta4_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 2.5894225507321437e-11,
+      "slack_sha256": "42de9020b72ac41609c6ec867e81b20573e4f45c8851be4958f0a553a98f3220"
+    },
+    {
+      "case": "holdout_broad_n80_eta4_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 2.071791605004386e-11,
+      "slack_sha256": "42de9020b72ac41609c6ec867e81b20573e4f45c8851be4958f0a553a98f3220"
+    },
+    {
+      "case": "holdout_broad_n80_eta8_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 1.1275285515492914e-12,
+      "slack_sha256": "5d4ec77e92336d7b161f56971ec067edced85c52ed083a90812b52214a271594"
+    },
+    {
+      "case": "holdout_broad_n80_eta8_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 1.4054082166788166e-11,
+      "slack_sha256": "5d4ec77e92336d7b161f56971ec067edced85c52ed083a90812b52214a271594"
+    },
+    {
+      "case": "holdout_broad_n80_eta8_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 5.114564775294879e-12,
+      "slack_sha256": "5d4ec77e92336d7b161f56971ec067edced85c52ed083a90812b52214a271594"
+    },
+    {
+      "case": "holdout_limited_n44_eta4_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 3.4127811278018725e-11,
+      "slack_sha256": "2d06902e4f50751a63d5ac65a34bd52a362c7edca1dff027eb7d48b065e02975"
+    },
+    {
+      "case": "holdout_limited_n44_eta4_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 3.4382639287631643e-11,
+      "slack_sha256": "2d06902e4f50751a63d5ac65a34bd52a362c7edca1dff027eb7d48b065e02975"
+    },
+    {
+      "case": "holdout_limited_n44_eta4_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 1.1321131694674335e-12,
+      "slack_sha256": "2d06902e4f50751a63d5ac65a34bd52a362c7edca1dff027eb7d48b065e02975"
+    },
+    {
+      "case": "holdout_limited_n44_eta8_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 3.0404867117706513e-11,
+      "slack_sha256": "e6962aa987002246946949a70c959175203e3825bb2f1310aa0a495c15fd92a1"
+    },
+    {
+      "case": "holdout_limited_n44_eta8_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 3.2405938061401916e-11,
+      "slack_sha256": "e6962aa987002246946949a70c959175203e3825bb2f1310aa0a495c15fd92a1"
+    },
+    {
+      "case": "holdout_limited_n44_eta8_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 5.358089516804895e-12,
+      "slack_sha256": "e6962aa987002246946949a70c959175203e3825bb2f1310aa0a495c15fd92a1"
+    },
+    {
+      "case": "holdout_limited_n80_eta4_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 6.677504753464666e-11,
+      "slack_sha256": "83fa0406958e6e5b4fbda0edc73928bb1a4cab468d365fce7caed98e3ad50337"
+    },
+    {
+      "case": "holdout_limited_n80_eta4_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 7.00307562167832e-11,
+      "slack_sha256": "83fa0406958e6e5b4fbda0edc73928bb1a4cab468d365fce7caed98e3ad50337"
+    },
+    {
+      "case": "holdout_limited_n80_eta4_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 3.899903942448922e-11,
+      "slack_sha256": "83fa0406958e6e5b4fbda0edc73928bb1a4cab468d365fce7caed98e3ad50337"
+    },
+    {
+      "case": "holdout_limited_n80_eta8_s00",
+      "repeat": 1,
+      "largest_relative_identity_error": 3.390784180630467e-12,
+      "slack_sha256": "3c5efa7de60b571341a1577ec6d03f6d5d73b6825e5eb0d7323400d26335e570"
+    },
+    {
+      "case": "holdout_limited_n80_eta8_s00",
+      "repeat": 2,
+      "largest_relative_identity_error": 4.280258462555899e-11,
+      "slack_sha256": "3c5efa7de60b571341a1577ec6d03f6d5d73b6825e5eb0d7323400d26335e570"
+    },
+    {
+      "case": "holdout_limited_n80_eta8_s00",
+      "repeat": 3,
+      "largest_relative_identity_error": 2.3424174373621544e-11,
+      "slack_sha256": "3c5efa7de60b571341a1577ec6d03f6d5d73b6825e5eb0d7323400d26335e570"
+    },
+    {
+      "case": "real44_tau2_4",
+      "repeat": 1,
+      "largest_relative_identity_error": 1.2842875181660842e-12,
+      "slack_sha256": "21666129218647e99dc6a9e6de3d788f9e5786a0b2dfdfa1bf8b3c2a0a92cfb6"
+    },
+    {
+      "case": "real44_tau2_4",
+      "repeat": 2,
+      "largest_relative_identity_error": 1.3945168545145042e-12,
+      "slack_sha256": "21666129218647e99dc6a9e6de3d788f9e5786a0b2dfdfa1bf8b3c2a0a92cfb6"
+    },
+    {
+      "case": "real44_tau2_4",
+      "repeat": 3,
+      "largest_relative_identity_error": 2.9329194986405164e-13,
+      "slack_sha256": "21666129218647e99dc6a9e6de3d788f9e5786a0b2dfdfa1bf8b3c2a0a92cfb6"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "proposed_methods_copied_without_changes": [
+    {
+      "original": "research/robust_rwhe_audit_20261117/audit_relaxations.jl",
+      "sha256_of_copied_functions": "7c8e3684d8bccbb56b43e25760ffda285d1d91ede3811bc7bb021f2eeeded64b",
+      "identical_in_common": true
+    },
+    {
+      "original": "research/deletion_paper_20261118/benchmark.jl",
+      "sha256_of_copied_functions": "f8a0c8d400fd562c5f55f5f6aa8036c9672ce507b2e3531b9a7bddca81f5e966",
+      "identical_in_common": true
+    },
+    {
+      "original": "research/kroc_manuscript_20261118/cascade_benchmark.jl",
+      "sha256_of_copied_functions": "c4b0493bb8347b02525d7f23bb819afc4f8d5dc07622ef02775e93ed38248acf",
+      "identical_in_common": true
+    }
+  ],
+  "all_45_input_files_byte_identical": true,
+  "new_hardware_data_included": false
+}

@@ -1,0 +1,76 @@
+passed = true
+reported_runs_checked = 27
+timing_includes_this_audit = false
+
+[[full_validations]]
+affine_error_upper = 1.2260585535955326e-9
+case = "holdout_broad_n44_eta4_s00"
+full_slack_psd_error_upper = 8.395418194517345e-7
+repeat = 1
+schur_shift_proposal = 0.058053013393112154
+sublevel_norm_squared_bound = 1920.5105884596142
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 1.1785881600989738e-9
+case = "holdout_broad_n44_eta8_s00"
+full_slack_psd_error_upper = 8.047214392632941e-7
+repeat = 1
+schur_shift_proposal = 0.1962155594600871
+sublevel_norm_squared_bound = 4759.955632138069
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 2.0798028139949346e-9
+case = "holdout_broad_n80_eta4_s00"
+full_slack_psd_error_upper = 2.397534808187825e-6
+repeat = 1
+schur_shift_proposal = 0.06050076361185458
+sublevel_norm_squared_bound = 3501.5644355352924
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 2.1103680731016137e-9
+case = "holdout_broad_n80_eta8_s00"
+full_slack_psd_error_upper = 2.6352041416855168e-6
+repeat = 1
+schur_shift_proposal = 0.1920750923479943
+sublevel_norm_squared_bound = 11090.174634750774
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 9.775410971622689e-10
+case = "holdout_limited_n44_eta4_s00"
+full_slack_psd_error_upper = 4.969164604083798e-7
+repeat = 1
+schur_shift_proposal = 0.05391350952785946
+sublevel_norm_squared_bound = 932437.1402561174
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 1.038006178794806e-9
+case = "holdout_limited_n44_eta8_s00"
+full_slack_psd_error_upper = 5.782856028018297e-7
+repeat = 1
+schur_shift_proposal = 0.24717838142965956
+sublevel_norm_squared_bound = 3.829515162398524e6
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 1.7856029062921082e-9
+case = "holdout_limited_n80_eta4_s00"
+full_slack_psd_error_upper = 2.0364945507054804e-6
+repeat = 1
+schur_shift_proposal = 0.06579747523206178
+sublevel_norm_squared_bound = 1.3328959245694377e6
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 1.6543464865565599e-9
+case = "holdout_limited_n80_eta8_s00"
+full_slack_psd_error_upper = 1.8294738095561466e-6
+repeat = 1
+schur_shift_proposal = 0.19586144493992588
+sublevel_norm_squared_bound = 5.383479394664632e6
+verified_lower = 0.0
+[[full_validations]]
+affine_error_upper = 2.2754271936341182e-10
+case = "real44_tau2_4"
+full_slack_psd_error_upper = 1.1731182004251648e-7
+repeat = 1
+schur_shift_proposal = 0.09108913346374484
+sublevel_norm_squared_bound = 7598.403444336002
+verified_lower = 0.0

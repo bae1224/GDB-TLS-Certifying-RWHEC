@@ -1,0 +1,33 @@
+{
+  "source_repository": "https://github.com/bae1224/Robot-World-and-Hand-Eye-Calibration-in-RB5-850",
+  "source_head": "2695301a22a9e3cc0e6388c2b39d34aa7eb40b44",
+  "copied_files": {
+    "rotation_sdp_constraints.jl": {
+      "source_path": "src/rotation_sdp_constraints.jl",
+      "sha256": "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237",
+      "matches_active_source": true
+    },
+    "LICENSE": {
+      "source_path": "LICENSE",
+      "sha256": "24e7df72a7422eadadb6534f956b1f4f07495f1d35fbfb35cf25431cdd750cb7",
+      "matches_active_source": true
+    },
+    "environment/Project.toml": {
+      "source_path": "environments/rb5/Project.toml",
+      "sha256": "7c5e733941b253d672a841fb05bf5f94cd856532dfa12d3ffcbec3386c94afa2",
+      "matches_active_source": true
+    },
+    "environment/Manifest.toml": {
+      "source_path": "environments/rb5/Manifest.toml",
+      "sha256": "c0e96ee65f0a9af065de65e7823102c77176f5a98e36ccf5328b135dd4e57a68",
+      "matches_active_source": true
+    }
+  },
+  "adapted_sources": [
+    "research/robust_rwhe_audit_20261117/audit_relaxations.jl: input and cost helpers only",
+    "research/deletion_paper_20261118/benchmark.jl: fixed-candidate proposed methods",
+    "research/kroc_manuscript_20261118/cascade_benchmark.jl: cascade",
+    "research/kroc_matched_comparison_20261123/ssr_drs.jl: original SSR adapter"
+  ],
+  "scope": "Existing paper inputs only: eight frozen synthetic cases and original real44; excludes newer hardware acquisitions. No remote publication performed."
+}

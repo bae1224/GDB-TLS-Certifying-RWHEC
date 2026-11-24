@@ -1,0 +1,11 @@
+holdout_broad_n44_eta4_s00 lower=0.0 affine=1.2260585535955326e-9 PSD=8.395418194517345e-7
+holdout_broad_n44_eta8_s00 lower=0.0 affine=1.1785881600989738e-9 PSD=8.047214392632941e-7
+holdout_broad_n80_eta4_s00 lower=0.0 affine=2.0798028139949346e-9 PSD=2.397534808187825e-6
+holdout_broad_n80_eta8_s00 lower=0.0 affine=2.1103680731016137e-9 PSD=2.6352041416855168e-6
+holdout_limited_n44_eta4_s00 lower=0.0 affine=9.775410971622689e-10 PSD=4.969164604083798e-7
+holdout_limited_n44_eta8_s00 lower=0.0 affine=1.038006178794806e-9 PSD=5.782856028018297e-7
+holdout_limited_n80_eta4_s00 lower=0.0 affine=1.7856029062921082e-9 PSD=2.0364945507054804e-6
+holdout_limited_n80_eta8_s00 lower=0.0 affine=1.6543464865565599e-9 PSD=1.8294738095561466e-6
+real44_tau2_4 lower=0.0 affine=2.2754271936341182e-10 PSD=1.1731182004251648e-7
+Test Summary:                            | Pass  Total  Time
+DRS integration and nonoptimal candidate |    5      5  0.0s

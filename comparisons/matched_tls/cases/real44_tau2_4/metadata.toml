@@ -1,0 +1,4 @@
+N = 44
+rot_weight = 125.0
+translation_weight = 5000.0
+tau2 = 4.0

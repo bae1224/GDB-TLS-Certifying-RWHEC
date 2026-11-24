@@ -1,0 +1,27 @@
+{
+  "reason": "A small residual in an unbounded translation direction cannot be discarded when claiming a global lower bound.",
+  "unchanged": [
+    "nine predeclared cases and their 45 input files",
+    "candidate optimization: none",
+    "proposed singleton, pairwise and cascade routines",
+    "DRS objective, projection, LS whitening, initialization, gamma=1.8",
+    "30 second per-call budget, three repeats, rotated method order"
+  ],
+  "changed": [
+    "Schur value is a screen and is never reported directly as a lower bound",
+    "exactly feasible rotation representation and outward candidate-cost upper bound",
+    "data-derived bound on the F<=U sublevel using floor(U)+1 deterministic round-robin groups",
+    "enclosed original-coordinate polynomial residual and full-slack PSD residual",
+    "zero fallback when a positive bound is unverified"
+  ],
+  "full_verification_trigger": "Schur proposal >= U - 1e-6*max(1,U)",
+  "lower_bound": "max(0,min(U,alpha-7*(N+1)*delta-C_U*(eps_affine+eps_psd)))",
+  "formal_proof_assistant_verification": false,
+  "scope": "A conservative validation layer for this RWHEC reimplementation; not a claimed enhancement or speed comparison for the original authors implementation.",
+  "source_sha256": {
+    "ssr_drs.jl": "5324bf072daf194b3b71856c1c0f3a0b5881d3a9182b91c76f4f3698f4c22cdc",
+    "verified_bound.jl": "9ec79a4b6a1e9a4aa33ac14d1938b9e8319e5b7df830091ea3f37d430345cae3",
+    "common.jl": "e3df41231746ffad2c60d78815860122ac40f42c7e0aee1bb3b47f9825557627",
+    "rotation_sdp_constraints.jl": "6d9bf598450956c1ce81e725dc97fc93a8120644861716b7dc37e94fdddca237"
+  }
+}

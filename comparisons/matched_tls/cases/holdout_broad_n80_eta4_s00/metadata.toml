@@ -1,0 +1,5 @@
+N = 80
+rot_weight = 5000.0
+translation_weight = 111111.11111111111
+tau2 = 16.0
+candidate_cost = 78.40903250684367

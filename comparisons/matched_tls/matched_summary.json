@@ -1,0 +1,82 @@
+{
+  "cases": 9,
+  "measured_calls": 108,
+  "repeats": 3,
+  "all_inputs_unchanged": true,
+  "all_repeats_consistent": true,
+  "groups": {
+    "broad": {
+      "cases": 4,
+      "single": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.051202755,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.185871036,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.118449627,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 125.082877643,
+        "timeout_repeats": 12
+      }
+    },
+    "limited": {
+      "cases": 4,
+      "single": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.050853667000000005,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.192560282,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 2,
+        "sum_case_medians_seconds": 0.12306466299999999,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 122.787589369,
+        "timeout_repeats": 12
+      }
+    },
+    "real": {
+      "cases": 1,
+      "single": {
+        "certified": 0,
+        "sum_case_medians_seconds": 0.011260445,
+        "timeout_repeats": 0
+      },
+      "pair": {
+        "certified": 1,
+        "sum_case_medians_seconds": 0.026940057,
+        "timeout_repeats": 0
+      },
+      "cascade": {
+        "certified": 1,
+        "sum_case_medians_seconds": 0.028430131,
+        "timeout_repeats": 0
+      },
+      "ssr_drs_rwhe": {
+        "certified": 0,
+        "sum_case_medians_seconds": 30.444241266,
+        "timeout_repeats": 3
+      }
+    }
+  },
+  "protocol_sha256": "b12425284ad7e05c0d570adaf0bd946ed0f64034c8b7be6766120459db313d07",
+  "selection": "All 2 motion x 2 N x 2 endpoint noise strata, replicate index 0; plus original real44 tau2=4. No selection by certification outcome.",
+  "official_DRS_or_STRIDE_run": false,
+  "scope": "Fixed nine-case comparison of this RWHEC reimplementation under the stated budget; no official DRS/STRIDE performance claim."
+}
