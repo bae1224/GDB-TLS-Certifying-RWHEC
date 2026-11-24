@@ -4,6 +4,8 @@
 
 원본 이미지·로봇 기록의 pose 추출, RWHEC 해 추정, 논문 고정 후보의 TLS 인증 코드 포함.
 
+[프로젝트 페이지](https://bae1224.github.io/Group-Deletion-Bounds-TLS-for-Certifying-RWHEC-Calibration/) · [논문 원고](docs/assets/paper.pdf)
+
 ## Robot–World and Hand–Eye Calibration (RWHEC)
 
 Robot–World and Hand–Eye Calibration: 관측 자세 `A_i`, `B_i`에서
@@ -40,6 +42,7 @@ LS 후보가 truncated least squares(TLS)에서도 최적인지 검사.
 | [environment](environment) | 고정된 Julia 의존성 환경 |
 | [real44data](real44data) | 논문 고정 A/B/X/Y, TLS 인증 코드, 기존 결과·재현 안내 |
 | [comparisons/matched_tls](comparisons/matched_tls) | 표 3의 SSR–DRS 재구현 비교, 하한 유도·잔차 검증, 고정 합성 8건·실측 1건 |
+| [docs](docs) | 프로젝트 페이지(GitHub Pages), 실험 사진·데이터 취득 영상·논문 원고 |
 
 ## 원본 이미지에서 RWHEC 해 구하기
 
