@@ -4,7 +4,7 @@
 
 원본 이미지·로봇 기록의 pose 추출, RWHEC 해 추정, 논문 고정 후보의 TLS 인증 코드 포함.
 
-[프로젝트 페이지](https://bae1224.github.io/Group-Deletion-Bounds-TLS-for-Certifying-RWHEC-Calibration/) · [논문 원고](docs/assets/paper.pdf)
+[프로젝트 페이지](https://bae1224.github.io/Group-Deletion-Bounds-TLS-Certifying-RWHEC/) · [논문 원고](docs/assets/paper.pdf)
 
 ## Robot–World and Hand–Eye Calibration (RWHEC)
 
